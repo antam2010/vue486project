@@ -30,7 +30,7 @@ const ing = ref('2021-06-20')
 <style scoped>
   .DiaryBoard{
     width: 100%;
-    height: 90%;
+    height: 100%;
     max-width:480px;
     margin:auto;
     padding: 10px;
