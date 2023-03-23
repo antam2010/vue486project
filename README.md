@@ -1,4 +1,6 @@
 # vue486project
+노드 버전 - v19.7.0
+npm,npx 버전 - 9.5.0
 
 ## Project setup
 ```
