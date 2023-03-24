@@ -6,9 +6,11 @@ import { ref, computed } from 'vue'
 import DiaryBoard from './route/DiaryBoard.vue'
 import DiaryCalendar from './route/DiaryCalendar.vue'
 import DiaryGallery from './route/DiaryGallery.vue'
+import DiaryLogin from './route/DiaryLogin.vue'
 
 const routes = {
   '/' : DiaryBoard,
+  './route/DiaryLogin' : DiaryLogin,
   './route/DiaryCalendar' : DiaryCalendar,
   './route/DiaryGallery' : DiaryGallery,
 }
@@ -39,6 +41,7 @@ const show = ref(true)
           <nav class="bookmark">
             <div @click="show = !show" class="bookmarkArea"><font-awesome-icon :icon="['fass', 'bookmark']" /></div>
             <ul v-if="!show" class="bookmarkNav">
+              <li><a @click="show = !show" href="#./route/DiaryLogin" class="navBar">Login</a></li>
               <li><a @click="show = !show" href="#/" class="navBar">Main</a></li>
               <li><a @click="show = !show" href="#./route/DiaryCalendar" class="navBar">Calendar</a></li>
               <li><a @click="show = !show" href="#./route/DiaryGallery" class="navBar">Gallery</a></li>
@@ -57,10 +60,13 @@ const show = ref(true)
 <style>
 @import "./assets/css/reset.css";
 @import "./assets/css/variable.css";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 /*배경 커스텀 css*/
 .container{
   width:100%;
   height:100%;
+  max-width:480px;
+  margin:auto;
 }
 .main_bg{
   width:100%;
@@ -68,11 +74,15 @@ const show = ref(true)
   background-color:var(--color-bg);
   padding:10px;
   box-sizing:border-box;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
+  align-items: center;
 }
 .main_bg_inner{
   width:100%;
   height:100%;
   background-color:var(--color-inner-bg);
+  border-radius: 5px;
 }
 .DiaryRouter{
   width:100%;
