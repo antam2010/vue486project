@@ -1,11 +1,16 @@
 <script setup>
-// const props = defineProps({
-//   show: Boolean
-// })
+import { defineProps } from 'vue'
+const props = defineProps({
+  show: {
+    Type: Boolean,
+    default : false
+  }
+})
+
 </script>
 <template>
     <Transition name="modal">
-    <div v-if="show" class="modal-mask">
+    <div v-if="props.show" class="modal-mask">
       <div class="modal-container">
         
         <button

@@ -3,6 +3,7 @@ import Modal from '../modals/LoginModal.vue'
 import { ref } from 'vue'
 
 const showModal = ref(false)
+console.log(showModal)
 </script>
 
 <template>
