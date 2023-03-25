@@ -2,21 +2,19 @@
   <div class="DiaryCalendar">
     Calendar
     <VCalendar />
-    <VDatePicker v-model="dates" />
   </div>
 </template>
 
 <script>
 import { ref } from 'vue';
-import { VCalendar, VDatePicker } from 'v-calendar';
+import { VCalendar } from 'v-calendar';
 import 'v-calendar/style.css';
 
 const dates = ref(new Date());
 
 export default {
   components: {
-    VCalendar,
-    VDatePicker
+    VCalendar
   },
   setup() {
     return { dates };
