@@ -2,23 +2,31 @@
   <div class="DiaryCalendar">
     Calendar
     <VCalendar />
-    <v-date-picker />
-      
+    <VDatePicker v-model="dates" />
   </div>
 </template>
 
 <script>
-// import { createApp } from 'vue';
-// import VCalendar from '@vcalendar/vue3';
-// import 'v-calendar/style.css';
+import { ref } from 'vue';
+import { VCalendar, VDatePicker } from 'v-calendar';
+import 'v-calendar/style.css';
 
-// const app = createApp({});
-// app.use(VCalendar);
+const dates = ref(new Date());
+
+export default {
+  components: {
+    VCalendar,
+    VDatePicker
+  },
+  setup() {
+    return { dates };
+  }
+};
 </script>
 
 <style scoped>
-  .DiaryCalendar{
-    width:100%;
-    height:100%;
+.DiaryCalendar {
+  width: 100%;
+  height: 100%;
   }
 </style>
